@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.main--section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(90%, #ecf2f8));
+  background: linear-gradient(to bottom, #fff, #ecf2f8 90%);
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 430px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .drawers {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 33vh;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
+}
+
+.main--card {
+  padding: 2.5rem 2rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.main--card .title {
+  color: #48556a;
+  line-height: 1.5em;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.main--card p {
+  line-height: 1.5em;
+  color: #9eafc2;
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+.signature--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signature--section .share {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ecf2f8;
+  padding: 0.5em;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.signature--section .share:hover, .signature--section .share.active {
+  background-color: #9eafc2;
+}
+
+.signature--section .share:hover path,
+.signature--section .share.active path {
+  fill: white;
+}
+
+.share--div {
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  gap: 1em;
+  left: 0;
+  bottom: 0;
+  background-color: #48556a;
+  border-radius: 0 0 10px 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform-origin: right 2.5rem;
+          transform-origin: right 2.5rem;
+}
+
+.share--div h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9eafc2;
+}
+
+.share--div.visible {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.social--link {
+  cursor: pointer;
+}
+
+.social--link:hover path {
+  fill: #6d7f97;
+}
+
+.avatar--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar--section img {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.avatar--section .signature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.avatar--section .signature .name {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.avatar--section .signature p {
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 840px) {
+  .main--section {
+    background: #ecf2f8;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    height: 100%;
+    max-height: 400px;
+    max-width: 1044px;
+    position: relative;
+  }
+  .container .drawers {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    height: 100%;
+    width: 39%;
+    border-radius: 10px 0 0 10px;
+    -o-object-fit: auto;
+       object-fit: auto;
+    -o-object-position: 0 100%;
+       object-position: 0 100%;
+  }
+  .main--card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 3em 4em 2em;
+    border-radius: 15px;
+  }
+  .main--card .title {
+    font-size: 1.7rem;
+  }
+  .main--card p {
+    font-size: 1.1rem;
+  }
+  .signature--section .share {
+    width: 3rem;
+    height: 3rem;
+  }
+  .share--div {
+    z-index: 1;
+    width: 45%;
+    height: 4rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 15px;
+    -webkit-transform-origin: right 2.5rem;
+            transform-origin: right 2.5rem;
+    bottom: 6.3rem;
+    right: -3.5rem;
+    left: unset;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  .share--div:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #48556a;
+    position: absolute;
+    bottom: -20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

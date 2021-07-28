@@ -1,0 +1,69 @@
+@media (min-width: 840px) {
+    .main--section {
+        background: $col-light-gray;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 80%;
+        height: 100%;
+        max-height: 400px;
+        max-width: 1044px;
+        position: relative;
+
+        .drawers {
+            flex-basis: 30%;
+            height: 100%;
+            width: 39%;
+            border-radius: 10px 0 0 10px;
+            object-fit: auto;
+            object-position: 0 100%;
+        }
+    }
+
+    .main--card {
+        flex-basis: 100%;
+        padding: 3em 4em 2em;
+        border-radius: 15px;
+
+        .title {
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .signature--section {
+        .share {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    .share--div {
+        z-index: 1;
+        width: 45%;
+        height: 4rem;
+        justify-content: center;
+        border-radius: 15px;
+        transform-origin: right 2.5rem;
+        bottom: 6.3rem;
+        right: -3.5rem;
+        left: unset;
+        transform-origin: bottom;
+
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+
+            border-top: 20px solid $col-dark-gray;
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+}
